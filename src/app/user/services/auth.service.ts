@@ -17,9 +17,9 @@ export class AuthService {
     return this.httpclient.post(this.api+'register',register,headerData);
   }
 
-  login(username:string,password:string):Observable<any> {
+  login(email:string,password:string):Observable<any> {
  
 
-    return this.httpclient.post(this.api+'login',{username:username,password:password},headerData)
+    return this.httpclient.post(this.api+'login',{email,password},headerData)
   }
 }
